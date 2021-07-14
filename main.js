@@ -14,6 +14,7 @@ const booksMets = {
     storedJson = localStorage.getItem('Books');
     bookList = JSON.parse(storedJson);
     booksMets.run(bookList);
+    console.log(bookList);
   },
   run(bookList) {
     bookList.forEach((book) => {
