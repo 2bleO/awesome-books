@@ -37,14 +37,7 @@ const booksMets = {
     // Create book li //
     books.appendChild(document.createElement('li')).setAttribute('id', book.id);
     booksProp.bookDiv = document.getElementById(book.id);
-    // Create book title //
-    booksProp.bookDiv.appendChild(document.createElement('p')).setAttribute('id', `${book.id}-title`);
-    booksProp.bookTitle = document.getElementById(`${book.id}-title`);
-    booksProp.bookTitle.innerText = book.title;
-    // Create book author //
-    booksProp.bookDiv.appendChild(document.createElement('p')).setAttribute('id', `${book.id}-author`);
-    booksProp.bookAuthor = document.getElementById(`${book.id}-author`);
-    booksProp.bookAuthor.innerText = book.author;
+    booksProp.bookDiv.innerHTML = `<p>${book.title}</p><p>${book.author}</P>`;
     // Create book button //
     booksProp.bookDiv.appendChild(document.createElement('button')).setAttribute('id', `${book.id}-btn`);
     booksProp.bookBtn = document.getElementById(`${book.id}-btn`);
