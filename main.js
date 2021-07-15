@@ -23,7 +23,9 @@ const booksMets = {
   },
   create(book) {
     // Create book li //
-    addingBook.appendChild(document.createElement('li')).setAttribute('id', book.id);
+    addingBook.appendChild(
+      document.createElement('li').setAttribute('id', `${book}.id`)
+    );
     // Create book title //
   },
   store() {
